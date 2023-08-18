@@ -1,0 +1,88 @@
+.section {
+  height: 100vh;
+}
+.profile_heading {
+  color: #1f1f1f;
+  font-size: 23px;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 35.7px;
+  white-space: nowrap;
+  padding: 10px 0;
+  text-align: center;
+}
+.card {
+  background: #fde5c7;
+  border-radius: 20px;
+  margin: 35px 0;
+  border: 3px solid #ffffff;
+  padding: 20px 40px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card h6 {
+  color: #1f1f1f;
+  font-size: 24px;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 25px;
+  white-space: nowrap;
+  padding: 40px 0;
+}
+
+.no_img {
+  background-color: #fde5c7;
+  width: 100px;
+}
+.product_img {
+  background-color: #fde5c7;
+  height: auto;
+  width: 150px;
+}
+
+.persol_info p,
+.persol_info small .product_head {
+  color: #1f1f1f;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 27px;
+  white-space: nowrap;
+  padding: 5px 0;
+}
+.persol_info p {
+  font-size: 18px;
+}
+.product_head {
+  font-size: 20px;
+  text-align: center;
+}
+.border_right {
+  position: absolute;
+  border-right: 1px solid #ffffff;
+  height: 50%;
+  width: 2px;
+}
+
+/* media query start */
+@media (max-width: 992px) {
+
+  .section {
+    height: auto;
+  }
+
+  .border_right {
+    display: none;
+  }
+ 
+  .persol_info p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 320px) {
+  .persol_info p {
+    font-size: 13px;
+  }
+}
