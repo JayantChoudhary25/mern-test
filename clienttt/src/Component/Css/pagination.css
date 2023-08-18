@@ -1,0 +1,32 @@
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px 10px;
+}
+.pageNo_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.pagination_btn {
+    border: 1px solid #efac5b;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+.activePage{
+    background: #e68713;
+    color: #fff;
+}
+.btn:focus {
+    outline: 0;
+    box-shadow: none !important;
+}

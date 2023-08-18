@@ -1,0 +1,227 @@
+.offcanvas-start {
+  top: 0;
+  left: 0;
+  width: 260px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  transform: translateX(-100%);
+  background: #fcd09a;
+}
+.mobile_drawer {
+  display: none;
+}
+
+/* notification dropdown */
+#transition-popper {
+  width: 25%;
+  transform: translate(295%, 65px) !important;
+}
+.MuiBadge-colorError {
+  background-color: #e8922f;
+}
+.notify_main {
+  max-height: 60vh;
+}
+.notify_main_scroll {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.custom_notify {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 18px 5px;
+}
+.notify_circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #e8922f;
+}
+
+.nofity_list {
+  font-size: 14px;
+  line-height: 18px;
+  white-space: nowrap;
+  padding-left: 10px;
+}
+
+/* notification end  */
+
+/* recharts start */
+
+.MuiTabs-scroller.MuiTabs-fixed.css-jpln7h-MuiTabs-scroller {
+  overflow-x: scroll !important;
+}
+.recharts-wrapper {
+  width: 78% !important;
+  margin: 0 auto;
+  height: 60vh !important;
+}
+svg.recharts-surface {
+  width: 100% !important;
+  height: 55vh !important;
+}
+.recharts-legend-item svg.recharts-surface {
+  height: 16px !important;
+}
+
+.recharts-legend-wrapper {
+  width: 100% !important;
+  margin: 0 auto;
+}
+/* recharts start */
+
+@media (max-width: 1200px) {
+  .css-advny6-MuiPopper-root {
+    width: 28%;
+    transform: translate(244%, 65px) !important;
+  }
+  #transition-popper {
+    width: 30%;
+    transform: translate(170%, 65px) !important;
+}
+}
+
+@media (max-width: 992px) {
+  .mobile_drawer {
+    display: block;
+  }
+  .navbar {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: start;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 7%;
+    height: 100vh;
+  }
+  .offcanvas-header .btn-close {
+    margin-top: -5.5rem;
+  }
+  button.navbar-toggler {
+    padding: 10px 0px;
+  }
+  .navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+  }
+  .mobile_drawer .container-fluid {
+    padding: 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .toggle_btn {
+    text-align: center;
+  }
+  .mobile_leftsection {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+  .mobile_leftsection span {
+    padding: 8px;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .mobile_leftsection .left_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  #transition-popper {
+    width: 36%;
+    transform: translate(130%, 65px) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile_drawer .container-fluid {
+    width: 100%;
+  }
+  button.navbar-toggler {
+    padding: 10px 0px;
+  }
+  button.navbar-toggler svg {
+    width: 20px;
+    height: 20px;
+  }
+  #transition-popper {
+    width: 55%;
+    transform: translate(48%, 65px) !important;
+  }
+  /* .navbar {
+  width: 40px;
+} */
+}
+@media (max-width: 551px) {
+  button.navbar-toggler {
+    padding: 10px 0px;
+  }
+  button.navbar-toggler svg {
+    width: 16px;
+    height: 16px;
+  }
+  .navbar {
+    width: 10%;
+  }
+  #transition-popper {
+    width: 80%;
+    transform: translate(26%, 65px) !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 30px; */
+    height: 34px;
+    padding: 5px 10px;
+    /* background: #FCD09A; */
+  }
+  .toggle_btn {
+    text-align: left;
+  }
+  button.navbar-toggler {
+    padding: 0px 0px;
+  }
+  .mobile_leftsection {
+    display: none;
+  }
+  #transition-popper {
+    width: 98%;
+    transform: translate(1%, 65px) !important;
+  }
+}
+@media (max-width: 320px) {
+  button.navbar-toggler {
+    padding: 10px 0px;
+  }
+  button.navbar-toggler svg {
+    width: 14px;
+    height: 14px;
+  }
+  #transition-popper {
+    width: 98%;
+    transform: translate(1%, 65px) !important;
+  }
+}

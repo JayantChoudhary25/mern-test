@@ -1,0 +1,187 @@
+.business_main {
+  width: 100%;
+}
+.card {
+  /* z-index: 9999; */
+  width: 30%;
+  border-radius: 20px;
+}
+#user {
+  border-radius: 30px;
+}
+.bussiness_head h5 {
+  color: #000;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.bussiness_head p {
+  color: #181818;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+.B-plan_bottom {
+  position: absolute;
+  bottom: 0px;
+  z-index: -1;
+}
+
+.text {
+  color: #d13a49;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 175% */
+  cursor: pointer;
+}
+
+.cardDisplay {
+  display: flex;
+  justify-content: space-around !important;
+}
+#B-plan-key {
+  text-decoration: none;
+  color: hsl(354, 62%, 52%);
+  margin: 20px 0px 20px 0px;
+  padding: 10px;
+  float: left;
+}
+#key {
+  float: left;
+  margin: 35px 0px 35px 0px;
+}
+.btn-close {
+  position: absolute;
+  opacity: 10;
+  margin: 5px;
+  right: 10px;
+}
+#B-plan-label {
+  text-align: start;
+  margin: 12px 0 ;
+  font-size: 25px;
+}
+
+.business_row{
+position: relative;
+}
+
+#icon{
+  position: absolute;
+  right: 0;
+  background-color: #d13a49;
+  border: none;
+  width: 74px;
+  height: -webkit-fill-available;
+}
+#icon svg{
+  height: 20px!important;
+  width: 20px !important;
+}
+#icon-2 {
+  background-color: #d13a49;
+  position: absolute;
+  right: 0;
+  border: none;
+  width: 74px;
+  height: -webkit-fill-available;
+  color: white;
+}
+#modal {
+  width: 200%;
+}
+#B-plan-label-2 {
+  color: #181818;
+  font-family: Quicksand;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+/* new  */
+.bplan_cards {
+  padding: 0 15px;
+  gap: 25px;
+}
+
+.custom_card {
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.05);
+  width: 30%;
+}
+.custom_card .business_img {
+  width: 97%;
+  height: auto;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.business_list {
+  list-style-image: url("../Assets/arrow.svg");
+}
+.business_list li {
+  line-height: 30px;
+  color: #181818;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  padding: 10px 0;
+}
+
+.card_img {
+  position: relative;
+  color: #fff;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.card_label {
+  position: absolute;
+  top: 10px;
+  left: 22px;
+  border-radius: 30px;
+  background: #d13a49;
+  text-align: center; 
+  font-size: 16px;
+  font-weight: 400;
+  width: 98px;
+  text-transform: capitalize;
+}
+
+.card_price {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.card_price p {
+  font-size: 40px;
+}
+.card_price small {
+  font-size: 18px;
+}
+
+/*------- meadia query -------*/
+@media (max-width: 991px) {
+  .custom_card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 776px) {
+  .custom_card {
+    width: 100%;
+  }
+}

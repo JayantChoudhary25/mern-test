@@ -1,0 +1,239 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome_text {
+  color: #1f1f1f;
+  font-size: 13px;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 18px;
+  padding-bottom: 5px;
+}
+
+.user_name {
+  color: #1f1f1f;
+  font-size: 15px;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 18px;
+  white-space: nowrap;
+  text-transform: capitalize !important;
+}
+
+.select_para {
+  color: #1f1f1f;
+  font-size: 24px;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 35.5px;
+  text-align: center;
+}
+
+.custom_card {
+  background: #fde5c7;
+  border-radius: 20px;
+  margin: 40px 0 60px 0;
+  border: 3px solid #ffffff;
+  padding: 40px 40px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom_box {
+  border-radius: 13px;
+  box-shadow: 0px 0px 13px 4px #986d3726;
+  text-align: center;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+.custom_logobox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px 20px;
+  background: #ffffff;
+  height: 80px;
+  border-radius: 13px 13px 0 0;
+}
+
+.custom_box h6 {
+  color: #1f1f1f;
+  font-size: 24px;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 37.5px;
+  white-space: nowrap;
+  text-transform: capitalize;
+  /* margin: 60px 0; */
+}
+
+.custom_popup {
+  position: relative;
+  background: #ffffff;
+  padding: 20px 0px;
+  border-radius: 10px;
+  /* width: 75%; */
+  margin: 15px auto;
+  width: 225px;
+  height: 160px;
+}
+
+.popup_content ul {
+  margin-top: 0.5rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 0px auto;
+  padding-left: 0px;
+}
+
+.popup_content {
+  list-style-position: inside;
+  text-align: left;
+  color: #1f1f1f;
+  font-size: 13px;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 25px;
+  white-space: nowrap;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding-bottom: 5px;
+  width: 150px;
+  margin: 8px auto;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+
+.profile {
+  position: relative;
+}
+
+.custom_dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: -11px;
+  top: 45px;
+  background-color: rgb(230, 135, 19);
+  padding: 5px 10px;
+  border-radius: 6px;
+  width: 120px;
+}
+
+.custom_dropdown:after {
+  width: 15px;
+  height: 15px;
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgb(230, 135, 19);
+  top: -6px;
+  bottom: 0;
+  right: 10%;
+  transform: rotateZ(45deg);
+}
+
+.custom_dropdown a {
+  text-decoration: none;
+  text-align: left;
+  color: White;
+  font-size: 14px;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: nowrap;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 8px 10px;
+}
+
+.border_bottom {
+  width: 100px;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.modal_head {
+  color: #1f1f1f;
+  font-size: 19px;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.para {
+  color: #1f1f1f;
+  font-size: 16px;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 28px;
+  padding: 5px 20px;
+}
+
+.custom_modal {
+  padding: 50px 40px;
+  width: 450px;
+}
+
+.custom_modal:focus-visible {
+  outline: none !important;
+}
+
+.close_icon {
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: 671px) and (max-width: 1180px) {
+  .custom_modal {
+    padding: 50px 40px;
+    width: 60%;
+  }
+}
+
+@media (min-width: 220px) and (max-width: 670px) {
+  .custom_card {
+    padding: 25px 10px;
+    margin: 25px 0 0;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .custom_modal {
+    padding: 50px 40px;
+    width: 90%;
+  }
+
+  .welcome_text {
+    font-size: 11px;
+  }
+
+  .user_name {
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 500;
+  }
+
+  .custom_box {
+    /* margin-bottom: 60px; */
+  }
+
+  .custom_box h6 {
+    font-size: 20px;
+    line-height: 24.5px;
+  }
+
+  .custom_logobox img {
+    height: 50px;
+  }
+}
