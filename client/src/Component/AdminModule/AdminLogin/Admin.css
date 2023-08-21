@@ -1,0 +1,169 @@
+/* .aa{
+    color: black !important;
+} */
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+@keyframes gradient {
+  100% {
+    background-size: 4000px 1000px;
+  }
+}
+
+.contentAdmin {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0 24px;
+  height: 100vh;
+  background-color: #f9f9f9;
+  background-image: url(../../Assets/Wave.svg);
+  background-size: 2000px 1000px;
+  background-position: -800px 0;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  animation: gradient 20s infinite alternate linear;
+}
+
+@media (width >= 500px) {
+  .contentAdmin {
+    padding: 0;
+  }
+}
+
+.login {
+  z-index: 3;
+
+  width: 90%;
+  padding: 60px 30px;
+  border-radius: 22px;
+  background: black;
+  /* background: -webkit-linear-gradient(bottom left, #010101, #0661FF); */
+  /* background: -moz-linear-gradient(bottom left, #010101, #0661FF); */
+  /* background: linear-gradient(to top right, #010101, #0661FF); */
+  text-align: center;
+}
+
+@media (width >= 450px) {
+  .login {
+    width: 550px;
+  }
+}
+
+.avatar {
+  margin: 0 auto 16px;
+  padding: 2px;
+  width: 230px;
+  height: auto;
+}
+
+.avatar > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login > h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.login > h3 {
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.login-form {
+  display: grid;
+  gap: 16px;
+  place-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.textbox {
+  width: 100%;
+  position: relative;
+}
+
+.textbox span {
+  position: absolute;
+  top: 25%;
+  left: 16px;
+  /* translate: 0 -50%; */
+  color: white;
+}
+
+.login-form input,
+.login-form button {
+  width: 100%;
+  height: 60px;
+  outline: none;
+  padding: 0;
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.login-form input {
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  color: #181818;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  text-indent: 15px;
+}
+.login-form input::placeholder {
+  color: #181818;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.login-form input:focus {
+  border-color: #157ae1;
+}
+
+.login-form input:focus ~ span {
+  color: #157ae1;
+}
+
+.login-form button {
+  cursor: pointer;
+  background: #d13a49;
+  border: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.login-form a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 10px;
+}

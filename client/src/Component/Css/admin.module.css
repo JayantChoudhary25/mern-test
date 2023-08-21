@@ -34,30 +34,33 @@
 }
 
 .left_menu span {
-  font-family: Poppins;
-  line-height: 19px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
   cursor: pointer;
-  margin-bottom: 10px;
   display: flex;
   justify-content: start;
+  align-items: center;
   border-radius: 8px;
   text-decoration: none;
   padding: 10px 5px;
-  padding-left: 10px;
+  padding-left: 15px;
   gap: 12px;
+  font-family: Quicksand;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  white-space: nowrap;
+  margin: 10px 15px;
 }
 
 .menu_links {
-  color: #453c3c;
+  color: #fff;
 }
 
 .active {
   color: black !important;
-  background-color: #efac5b;
+  background-color: #fff;
   transition: width 5s ease-in-out 0.2s;
+  text-align: center;
 }
 
 /* .menu_links:hover {
@@ -98,6 +101,15 @@
   padding: 5px 20px;
   height: 70px;
 }
+.top_section h6 {
+  color: #000;
+text-align: center;
+font-family: Quicksand;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
 
 /* dashboard home page */
 .dashboard_main {
@@ -110,33 +122,35 @@
 }
 
 .welcome {
-  color: #1f1f1f;
-  font-size: 23px;
-  font-weight: 500;
-  font-family: Poppins;
-  line-height: 18px;
+  color: #000;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
   white-space: nowrap;
 }
 
 .heading {
-  color: white;
-  font-size: 44px;
-  line-height: 38.7px;
-  font-family: Poppins;
+  color: #000;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
   white-space: nowrap;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .dashboard_img {
-  width: 80%;
+  width: 55%;
   margin: 0 auto;
 }
 
-
-
 @media (min-width: 992px) and(max-width: 1024px) {
   .heading {
-    color: white;
     font-size: 34px;
     line-height: 24.7px;
     /* white-space: normal; */

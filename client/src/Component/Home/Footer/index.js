@@ -17,7 +17,7 @@ const navItems = [
   {
     id: 3,
     item: "business plan",
-    path: "/business_plan",
+    path: "/business-plan",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const Footer = () => {
     <>
       <nav className="navbar navbar-expand-lg header_main">
         <div className="container justify-content-between">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             <img
               src={logo}
               alt=""

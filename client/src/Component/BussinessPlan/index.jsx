@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -24,27 +24,29 @@ const style = {
 export const dummyArray = [
   {
     id: 1,
-    label: "trial",
+    plan: "trial",
     price: "$09.99",
   },
   {
     id: 2,
-    label: "standard",
+    plan: "standard",
     price: "$09.99",
   },
   {
     id: 3,
-    label: "pro",
+    plan: "pro",
     price: "$09.99",
   },
 ];
 
 const BusinessPlan = () => {
-  const [open, setOpen] = React.useState(false);
-  const [isAccessCode, setAccessCode] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [businessPlan, setBusinessPlan] = useState("");
+  const [isAccessCode, setAccessCode] = useState(false);
 
-  const handleOpen = () => {
+  const handleOpen = (plan) => {
     setOpen(true);
+    setBusinessPlan(plan)
   };
   const handleClose = () => {
     setOpen(false);
@@ -65,7 +67,7 @@ const BusinessPlan = () => {
             <div className="custom_card py-3" key={row.id}>
               <div className="card_img">
                 <img src={card} alt="plan" className="business_img" />
-                <div className="card_label">{row.label}</div>
+                <div className="card_label">{row.plan}</div>
                 <div className="card_price">
                   <p className="mb-1">{row.price}</p>
                   <small>per month</small>
@@ -86,11 +88,11 @@ const BusinessPlan = () => {
                     <button
                       role="button"
                       className="btn btn_link me-2"
-                      onClick={handleOpen}
+                      onClick={()=>handleOpen(row.plan)}
                     >
-                      <b>Start Now</b>
-                    </button>
+                      <b className="me-2">Start Now</b>
                     <img src={group} alt="start" height="20" width="20" />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -133,6 +135,7 @@ const BusinessPlan = () => {
             <SendMailPopup 
               openAccModal={handleOpenAccess}
               closeModal={handleClose}
+              businessPlan={businessPlan}
             />
           </Box>
         </Modal>

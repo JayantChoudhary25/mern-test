@@ -1,0 +1,14 @@
+.signature_pad {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid red;
+  width: 350px;
+  height: 150px;
+}
+.details{
+  width: 50%;
+}
+.details input {
+  width: 75%;
+  height: 52px;
+}

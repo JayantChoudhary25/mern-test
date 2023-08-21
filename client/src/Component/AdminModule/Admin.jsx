@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { UserList } from "./AdminPages/UserList";
+
 import style from "../Css/admin.module.css";
 import stylelogin from "../Css/Login.module.css";
 import "../Css/style.css";
@@ -9,6 +11,12 @@ import "./style.css"
 import logo from "../Assets/logo.svg";
 import menu_icon from "../Assets/menu_icon.svg";
 import logoutIcon from "../Assets/admin/logout.svg";
+import Home from "../Assets/admin/Home.svg";
+import Dashboard from "../Assets/admin/dashboard.svg";
+import { Business_page } from "./AdminPages/BusinessPage";
+import { NonSignedUser } from "./AdminPages/NonSignedUser";
+import { SubscribedUser } from "./AdminPages/SubscribedUser";
+import { SignedUser } from "./AdminPages/SignedUser";
 
 const MainPage = () => {
   return (
@@ -16,14 +24,14 @@ const MainPage = () => {
       <div className={style.dashboard_main}>
         <div className="">
           <div className={style.dahboard_inner}>
-            <p className={`text-center mb-3 ${style.welcome}`}>Welcome to </p>
+            <p className={`text-center mb-1 ${style.welcome}`}>Welcome to </p>
             <p className={`text-center ${style.heading}`}>
               <span className="text_secondary fw-600">Admin</span>
               <span className="text_primary ms-md-3 ms-2">Dashboard</span>
             </p>
           </div>
           <div className={`text-center mb-3 ${style.dashboard_img}`}>
-            <img src="" alt="" className="img-fluid" />
+            <img src={Dashboard} alt="" className="img-fluid" />
           </div>
         </div>
       </div>
@@ -36,41 +44,41 @@ const adminDashList = [
     id: 1,
     label: "Dashboard",
     component: <MainPage />,
-    icon: `$`,
+    icon: `${Home}`,
   },
   {
     id: 2,
-    label: "User List",
-    component: "",
+    label: "All Users",
+    component: <UserList />,
     icon: ``,
   },
   {
     id: 3,
-    label: "Send Invitation",
-    component: "",
+    label: "Business Plan",
+    component: <Business_page /> ,
     icon: ``,
   },
   {
     id: 4,
-    label: "Subscription List",
-    component: "",
+    label: "Signed User",
+    component: <SignedUser />,
     icon: ``,
   },
   {
     id: 5,
-    label: "Invitation List",
-    component: "",
+    label: "Non-Signed User",
+    component: <NonSignedUser/>,
     icon: ``,
   },
   {
     id: 6,
-    label: "All Products",
-    component: "",
+    label: "Subscribed User",
+    component: <SubscribedUser/>,
     icon: ``,
   },
   {
     id: 7,
-    label: "Graphs",
+    label: "",
     component: "",
     icon: ``,
   },
@@ -83,7 +91,8 @@ export const Admin = () => {
 
   // logout
   const handleOpen = () => {
-    navigate("/");
+    localStorage.removeItem("accessToken");
+    navigate("/admin-login");
   };
 
   const handleComponent = (label, id) => {
@@ -180,11 +189,11 @@ export const Admin = () => {
                           data-bs-dismiss="offcanvas"
                           aria-label="Close"
                         >
-                          <img
+                          {/* <img
                             src={list.icon}
                             alt=""
                             style={{ height: "18px", width: "18px" }}
-                          />
+                          /> */}
                           {list.label}
                         </span>
                       ))}
@@ -240,11 +249,11 @@ export const Admin = () => {
                     }`}
                     onClick={() => handleComponent(list.label, list.id)}
                   >
-                    <img
+                    {/* <img
                       src={list.icon}
                       alt=""
                       style={{ height: "18px", width: "18px" }}
-                    />
+                    /> */}
                     {list.label}
                   </span>
                 ))}
@@ -260,8 +269,7 @@ export const Admin = () => {
               }}
             ></div>
             <b
-              className="text-center px-2"
-              style={{ fontSize: "18px", cursor: "pointer" }}
+              className="text-center px-2 sign_out"
               onClick={handleOpen}
             >
               <img

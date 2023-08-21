@@ -63,30 +63,38 @@
 }
 #B-plan-label {
   text-align: start;
-  margin: 12px 0 ;
+  margin: 12px 0;
   font-size: 25px;
+  color: #181818;
+  font-family: Quicksand;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
-.business_row{
-position: relative;
+.business_row {
+  position: relative;
 }
 
-#icon{
+#icon {
   position: absolute;
   right: 0;
+  top: 0;
   background-color: #d13a49;
   border: none;
   width: 74px;
   height: -webkit-fill-available;
 }
-#icon svg{
-  height: 20px!important;
+#icon svg {
+  height: 20px !important;
   width: 20px !important;
 }
 #icon-2 {
   background-color: #d13a49;
   position: absolute;
   right: 0;
+  top: 0;
   border: none;
   width: 74px;
   height: -webkit-fill-available;
@@ -153,7 +161,7 @@ position: relative;
   left: 22px;
   border-radius: 30px;
   background: #d13a49;
-  text-align: center; 
+  text-align: center;
   font-size: 16px;
   font-weight: 400;
   width: 98px;

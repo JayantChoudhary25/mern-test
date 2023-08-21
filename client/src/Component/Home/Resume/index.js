@@ -4,27 +4,32 @@ import michel from "./..//../Assets/michel.png";
 import call from "./..//../Assets/fi_3059446.svg";
 import email from "./..//../Assets/icon.svg";
 import location from "./..//../Assets/Vector (1).svg";
+import Animated from "./animated";
+import Mobile from "./mobileview/mobile";
 
-
-const Index = () => {
+const Resume = () => {
   return (
     <>
-      <section>
-        <div className=" container">
-          <div className=" r-main-div d-flex">
+      <section >
+        <Mobile/>
+        <div id="desk" className=" container">
+        <div className=" r-main-div d-flex">
             <div className=" r-michel">
               <div>
                 <img className="r-michel-img" src={michel} alt="image" />
               </div>
               <div className=" r-digitall">
-                    <span className="r-digital">DIGITAL UTILITY EXPERT</span>
-                  </div>
-              <div className="bg-dark relative text-white px-5 py-5 ">
-                {/* <div className="position-absolute w-25" id="utility" >
-                 <h5 className="bg-primary text-white w-50 text-center " >DIGITAL UTILITY EXPERT</h5>
-                 </div> */}
-                <div className="d-flex py-4 justify-content-between w-75 text-white">
-                  <div className="">
+                <span className="r-digital">DIGITAL UTILITY EXPERT</span>
+              </div>
+              <div
+                className="bg-dark relative text-white px-5 py-5
+               "
+              >
+                <div
+                  id="details"
+                  className="d-flex py-3 justify-content-evenly   text-white"
+                >
+                  <div className="height-s">
                     <p id="about-U">Height:6'2"</p>
                     <p id="about-U">Sex:Male</p>
                   </div>
@@ -34,7 +39,9 @@ const Index = () => {
                   </div>
                 </div>
                 <h4>
-                  <b id="e-edu" className="my-0">EDUCATION</b>
+                  <b id="e-edu" className="">
+                    EDUCATION
+                  </b>
                 </h4>
                 <div className="r-blue-bar my-3 mb-4"></div>
                 <p>
@@ -43,90 +50,110 @@ const Index = () => {
                 <p id="e-cllg-year">(Albright Collage 2000-2003 )</p>
               </div>
               <div className="sec_3">
-                <div className="w-75 m-auto py-5 pt-5">
+                <div id="hm" className=" m-auto py-5 pt-5">
                   <h4>
-                    <b id="expr">EXPERTISE</b>
+                    <b className="pt-4" id="expr ">EXPERTISE</b>
                   </h4>
-                  <div className="r-blue-bar"></div>
+                  <div className="r-blue-bar mt-4"></div>
                   <div className="d-flex"></div>
 
-                  <div id="progress-box" className="row justify-content-center align-items-center">
-                    <div className="col-md-6">
+                  <div
+                    id="progress-box"
+                    className="row justify-content-center align-items-center"
+                  >
+                    <div className="col-md-6 mt-3">
                       <div className="tool" id="results">
-                      Growth Strategy
-                        <p className="tooltiptext">Growth Strategy: 99%
-Responsible for developing and implementing strategic plans and initiatives aimed at expanding a company's market presence, increasing revenue, and maximizing overall business growth. This involves analyzing market trends, identifying opportunities for expansion, optimizing processes, and aligning resources to achieve sustainable and accelerated growth.</p>
+                        Growth Strategy
+                        <p className="tooltiptext">
+                          Growth Strategy: 99% Responsible for developing and
+                          implementing strategic plans and initiatives aimed at
+                          expanding a company's market presence, increasing
+                          revenue, and maximizing overall business growth. This
+                          involves analyzing market trends, identifying
+                          opportunities for expansion, optimizing processes, and
+                          aligning resources to achieve sustainable and
+                          accelerated growth.
+                        </p>
                       </div>
                     </div>
-                    <div className="col-md-6">
-                      <div id="pro-bar" className="progress bg-dark">
+                    <div className="col-md-6 mt-3">
+                      {/* <div id="pro-bar" className="progress bg-dark">
                         <div className="growth-progress"></div>
-                      </div>
+                      </div> */}
+                      <Animated progressRange={100}/>
                     </div>
 
-                    <div className="col-md-6">
-                      <h6 className="line-hov"id="results">
+                    <div className="col-md-6 mt-2">
+                      <h6 className="line-hov" id="results">
                         Innovation
                       </h6>
                     </div>
-                    <div className="col-md-6">
-                      <div id="pro-bar" className="progress bg-dark">
+                    <div className="col-md-6 mt-2">
+                      {/* <div id="pro-bar" className="progress bg-dark">
                         <div className="innov-progress"></div>
-                      </div>
+                      </div> */}
+                      <Animated progressRange={60}/>
                     </div>
 
-                    <div className="col-md-6">
-                      <h6 className="line-hov"id="results">
+                    <div className="col-md-6 mt-2">
+                      <h6 className="line-hov" id="results">
                         AI Solutions
                       </h6>
                     </div>
-                    <div className="col-md-6">
-                      <div id="pro-bar" className="progress bg-dark">
+                    <div className="col-md-6 mt-2">
+                      {/* <div id="pro-bar" className="progress bg-dark">
                         <div className="AI-progress"></div>
-                      </div>
+                      </div> */}
+                      <Animated progressRange={50}/>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6 mt-2">
                       <h6 className="line-hov" id="results">
                         IT Solutions
                       </h6>
                     </div>
-                    <div className="col-md-6">
-                      <div id="pro-bar" className="progress bg-dark">
+                    <div className="col-md-6 mt-2">
+                      {/* <div id="pro-bar" className="progress bg-dark">
                         <div className="IT-progress"></div>
-                      </div>
+                      </div> */}
+                      <Animated progressRange={80}/>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6 mt-2">
                       <h6 className="line-hov" id="results">
                         Marketing
                       </h6>
                     </div>
-                    <div className="col-md-6">
-                      <div id="pro-bar" className="progress bg-dark">
+                    <div className="col-md-6 mt-2">
+                      {/* <div id="pro-bar" className="progress bg-dark">
                         <div className="marketing-progress"></div>
-                      </div>
+                      </div> */}
+                      <Animated progressRange={50}/>
                     </div>
                   </div>
                 </div>
-                <div className="w-75 m-auto py-5">
+                <div id="hm" className=" m-auto py-4">
                   <h4>
-                    <b id="interest">Interests</b>
+                    <b id="interest" className="py-2">
+                      Interests
+                    </b>
                   </h4>
                   <div className="r-blue-bar"></div>
                   <div className="d-flex justify-content-between lh-lg">
-                    <div>
+                    <div className="mt-3">
                       <div className="d-flex">
                         <li id="finance"></li>
                         <p id="cat-inter">Finance</p>
                       </div>
-                      <div className="d-flex">
-                        <li id="techno"></li>
-                        <p id="cat-inter">Technology</p>
-                      </div>
-                    </div>
-                    <div>
+
+                    
                       <div className="d-flex">
                         <li id="enginee"></li>
                         <p id="cat-inter">Engineering</p>
+                      </div>
+                    </div>
+                    <div className="mt-3">
+                      <div className="d-flex">
+                        <li id="techno"></li>
+                        <p id="cat-inter">Technology</p>
                       </div>
                       <div className="d-flex">
                         <li id="reading"></li>
@@ -135,31 +162,36 @@ Responsible for developing and implementing strategic plans and initiatives aime
                     </div>
                   </div>
                 </div>
-                <div className="d-flex w-75 m-auto `">
-                  <div className="icon-sec ">
+                <div id="hm" className="d-flex  m-auto mt-5s ">
+                  <div className="icon-sec mt-4 pb-5">
                     <img id="icon-resume" src={call} />
-                    <img  id="icon-resume" className="my-5" src={email} />
-                    <img id="icon-resume" className="my-4" src={location} />
+                    <img id="icon-resume" className="my-5" src={email} />
+                    <img
+                      id="icon-resume"
+                      className="my-3 w-50 p-1"
+                      src={location}
+                    />
                   </div>
-                  <div>
-                    <div>
+                  <div className="mt-4 ">
+                    <div className="pb-3">
                       <h6 id="info"> Call me!</h6>
-                      <p id="info-c">1(866)-376-1970</p>
+                      <a href="tel:1(866)3761970" id="info-c">1(866)-376-1970</a>
                     </div>
-                    <div className="py-4">
+                    <div className="pt-3 pb-3">
                       <h6 id="info"> Email me!</h6>
-                      <p id="info-c">mpricharda@gmail.com</p>
+                      <a href="mailto:mpricharda@gmail.com" id="info-c">mpricharda@gmail.com</a>
                     </div>
-                    <div className="">
+                    <div className="pt-3  pb-3">
                       <h6 id="info"> Send me coupons!</h6>
-                      <p id="info-c" className="pb-5">Reading, pA, USA</p>
+                      <a id="info-c-l">Reading, pA, USA</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div>
             <div className="r-left-dive">
-              <div className="    resume-right-top">
+              
                 <div className="right-michel-divv">
                   <p className="r-michel-head">
                     {" "}
@@ -181,12 +213,12 @@ Responsible for developing and implementing strategic plans and initiatives aime
                     and platforms, embodying clients' vision to increase market
                     share and profitability.
                   </div>
-                </div>
+               
               </div>
 
               <div className="left-inner">
                 <p className="r-work">WORK EXPERIENCE</p>
-                <div className="r-blue-bar"></div>
+                <div className="r-blue-bar-2"></div>
                 <p className="r-ceo">CEO, President</p>
                 <div className="d-flex">
                   <div className="r-current">
@@ -205,14 +237,14 @@ Responsible for developing and implementing strategic plans and initiatives aime
                   the highest standards of responsibility and transparency.
                 </p>
 
-                <p className="r-ceo">Executive Director, President</p>
+                <p className="r-ceo-e">Executive Director, President</p>
                 <div className="d-flex">
                   <div className="r-current">
-                    <p className="r-current-t">2014 &gt; Current</p>
+                    <p className="r-current-t-2">2014 &gt; Current</p>
                   </div>
                   <p className="r-trained">The CoCreate Group</p>
                 </div>
-                <p className="r-para-2 ">
+                <p className="r-para-2">
                   Pioneered nonprofit initiative guiding startups and nonprofits
                   through their early years. Orchestrated development of unique
                   programs and resources, equipping emerging organizations with
@@ -221,7 +253,7 @@ Responsible for developing and implementing strategic plans and initiatives aime
                   to broaden impact, and drive collective success.
                 </p>
 
-                <p className="r-ceo">Growth, IT, Strategy Consultant</p>
+                <p className="r-ceo-g">Growth, IT, Strategy Consultant</p>
                 <div className="d-flex">
                   <div className="r-current">
                     <p className="r-current-t">2003 &gt; Current</p>
@@ -242,67 +274,68 @@ Responsible for developing and implementing strategic plans and initiatives aime
 
                 <h3 className="skills">SKILLS</h3>
                 <div className="r-blue-bar"></div>
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between mt-4">
                   <div className="">
-                    <ul className="list">
-                      <li>Advertising / Branding / Digital Marketing</li>
-                      <li>Budgeting, Expense Planning</li>
-                      <li>Campaign Design and Management</li>
-                      <li>Collaborative Communication</li>
-                      <li>Consultative Sales</li>
-                      <li>Cost Control</li>
-                      <li>Critical Thinking & Analysis</li>
-                      <li>Customer Care</li>
-                      <li>Event Management</li>
-                      <li>Independent and Teamwork</li>
-                      <li>Lean Management</li>
-                      <li>Operations Management</li>
+                    <ul id="list">
+                      <li id="list">Advertising / Branding / Digital Marketing</li>
+                      <li id="list">Budgeting, Expense Planning</li>
+                      <li id="list">Campaign Design and Management</li>
+                      <li id="list">Collaborative Communication</li>
+                      <li id="list">Consultative Sales</li>
+                      <li id="list">Cost Control</li>
+                      <li id="list">Critical Thinking & Analysis</li>
+                      <li id="list">Customer Care</li>
+                      <li id="list">Event Management</li>
+                      <li id="list">Independent and Teamwork</li>
+                      <li id="list">Lean Management</li>
+                      <li id="list">Operations Management</li>
                     </ul>
                   </div>
                   <div className="">
-                    <ul className="list">
-                      <li>Presentations</li>
-                      <li>PR & Negotiation</li>
-                      <li>Process Improvement </li>
-                      <li> Problem-Solving </li>
-                      <li>Project Ownership</li>
-                      <li> Public Speaking & Relationship Building</li>
-                      <li> SEO / SMO</li>
-                      <li> Strategic Planning and Implementing </li>
-                      <li> Supervision & Activities Coordination</li>
-                      <li> Team Development</li>
-                      <li>Time Management</li>
-                      <li>Workload Prioritization & Multitasking</li>
+                    <ul id="list">
+                      <li id="list">Presentations</li>
+                      <li id="list">PR & Negotiation</li>
+                      <li id="list">Process Improvement </li>
+                      <li id="list"> Problem-Solving </li>
+                      <li id="list">Project Ownership</li>
+                      <li id="list"> Public Speaking & Relationship Building</li>
+                      <li id="list">  SEO / SMO</li>
+                      <li id="list"> Strategic Planning and Implementing </li>
+                      <li id="list"> Supervision & Activities Coordination</li>
+                      <li id="list"> Team Development</li>
+                      <li id="list">Time Management</li>
+                      <li id="list">Workload Prioritization & Multitasking</li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        <div className=" m-auto py-5">
-          <div
-            className="row justify-content-center align-items-center mb-5"
-            style={{ gap: "10px" }}
-          >
-            <div className="col-lg-2 col-md-3 col-10">
-              <button type="button" className="btn  custom_btn">
-                DOWNLOAD
-              </button>
             </div>
-            <div className="col-lg-2 col-md-3 col-10">
-              <button type="button" className="btn  custom_btn">
-                <a className="b-contact" href="/contact">
-                  CONTACT ME
-                </a>
-              </button>
+          </div>
+          <div className=" m-auto py-5">
+            <div
+              className="row justify-content-center align-items-center mb-5"
+              style={{ gap: "10px" }}
+            >
+              <div className="col-lg-2 col-md-3 col-10">
+                <button type="button" className="btn  custom_btn">
+                  DOWNLOAD
+                </button>
+              </div>
+              <div className="col-lg-2 col-md-3 col-10">
+                <button type="button" className="btn  custom_btn">
+                  <a className="b-contact" href="/contact">
+                    CONTACT ME
+                  </a>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-
+        
       </section>
     </>
   );
 };
 
-export default Index;
+export default Resume;

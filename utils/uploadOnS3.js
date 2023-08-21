@@ -1,7 +1,5 @@
 const { S3 } = require('aws-sdk');
 const AWS = require('aws-sdk');
-// const dotenv = require("dotenv");
-// dotenv.config({ path: "../config.env" });
 
 const s3Bucket = new AWS.S3({
     accessKeyId: process.env.KEYID,

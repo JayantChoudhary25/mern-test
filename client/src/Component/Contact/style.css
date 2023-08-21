@@ -1,3 +1,5 @@
+
+
 #form-head {
   margin: 20px 0;
   padding: 40px 0;
@@ -19,7 +21,7 @@
   font-family: "Quicksand", sans-serif;
   color: #181818;
   text-align: center;
-
+  width: 50%;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -55,11 +57,12 @@
   margin: 15px;
   margin-top: 0px;
   border-color: 1px solid;
+  background-color: white;
 }
 #form-textarea {
   width: 95%;
   margin: 0px 15px 0px 15px;
-  height: 67%;
+  height: 69%;
   border-color: 1px solid;
 }
 
@@ -104,6 +107,11 @@ line-height: 26px;
     #call-me {
       width: 50% !important; 
     }
+    
+    #form-p{
+      width: 100%;
+    }
+    
     #form-box-p{
       line-height: 13px;
     }
@@ -121,12 +129,41 @@ line-height: 26px;
   @media (min-width:500px) and (max-width:767px){
     #mail-call{
       padding-bottom: 16px;
+      width: 99%;
     }
     .g-mail{
-
-      
       word-break: break-all;
-      
      }
+     #form-p{
+      width: 100%;
+    }
+    
+  }
+  @media (max-width:500px){
+    .g-mail{
+      word-break: break-all;
+     }
+     #form-p{
+      width: 100%;
+    }
+    #mail-call{
+      flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 24px;
+    width: 98%;
+
+    }
+    .form-input-border{ 
+    flex-direction: column;
+    width: 95%;}
+
+    .form-input-border2{
+      flex-direction: column;
+      width: 95%;
+    }
+    #form-textarea{
+      margin: 0 15px 20px 15px;
+    }
     
   }

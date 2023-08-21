@@ -1,3 +1,6 @@
+
+
+
 .header_main {
   height: 114px;
   background: #000;
@@ -11,6 +14,7 @@
   line-height: normal;
   text-decoration: none;
   text-transform: capitalize;
+  position: relative;
 }
 .navbar-toggler:focus {
   text-decoration: none;
@@ -26,7 +30,7 @@ li.nav-item.list_items.px-3:last-child:hover {
   transform: rotate(360deg);
 }
 
-a.nav-link:after {
+/* a.nav-link:after {
   display: block;
   content: '';
   border-bottom: solid 1px #fff;
@@ -38,14 +42,58 @@ a.nav-link:after {
 a.nav-link:hover:after {
   transform: scaleX(1);
   transform-origin: 0% 50%;
+  
+} */
+
+a.nav-link:hover:before {
+  width: 50%;
+  transform: translateX(100%);
+}
+
+
+a.nav-link:hover:after {
+  width: 50%;
+  transform: translateX(-100%);
+
+}
+
+a.nav-link:before {
+  content: "";
+  width: 0;
+  height: 5px;
+  background-color: #3a7bfa;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  transition: all 0.5s;
+}
+
+a.nav-link:after {
+  content: "";
+  width: 0;
+  height: 5px;
+  background-color: #d13a49;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  transition: all 0.5s;
+  
 }
 
 
 /*------- meadia query -------*/
 @media (max-width: 767px) {
+.header_main .container{
+  /* display: none; */
+  /* width: 100% !important; */
+  max-width: 100%
+}
+a.nav-link:hover:before {
+  width: 25%;}
+
   .responsive_drawer {
     background: black;
-    height: 65vh;
+    /* height: 65vh; */
   }
 
   .responsive_drawer ul {
@@ -59,11 +107,31 @@ a.nav-link:hover:after {
   }
 
   .header_main .list_items:hover.list_items a {
-    border-bottom: 1px solid #fff;
+    /* border-bottom: 1px solid #fff; */
     transition: ease-in-out;
     transition-property: all;
     transition-duration: 3s;
     transition-delay: 1ms;
   }
+  /* .navbar-toggler{
+    font-size: 15px;
+  } */
+  a.nav-link:hover:after{
+    width: 25%;
+    transform-origin: center;
+    /* transform: translate(200%, 0%); */
+  }
+  .header_main .list_items a{
+    font-size:16px !important;
+  }
+}
+@media (max-width:992px){
+  .header_main .list_items a{
+    font-size: 11px;
+  }
+  .h-michel-logo{
+    width:200px;
+  }
+
 }
 

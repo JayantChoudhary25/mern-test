@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import victor2 from "../../Assets/Vector 1.png";
 import SendIcon from "./assets/send";
 
-const SendMail = ({ openAccModal, closeModal }) => {
+const SendMail = ({ openAccModal, businessPlan, closeModal }) => {
+
+  const navigate = useNavigate()
   const [email, setEmail] = useState("");
+  const [isLoader, setLoader] = useState(false);
 
   const hideModal = () => {
     closeModal();
@@ -12,14 +16,30 @@ const SendMail = ({ openAccModal, closeModal }) => {
 
   const submitEmail = async (e) => {
     e.preventDefault();
-    hideModal();
-    openAccModal();
+    navigate("/agreement");
+    const reqbody = {
+      businessName: businessPlan,
+      email: email,
+    };
 
-    await axios.post("", { email: email }, "").then((res) => {
-      console.log("res", res).catch((e) => {
-        console.log("e", e);
+    setLoader(true);
+    await axios
+      .post("/api/auth/sendInvite", reqbody, "")
+      .then((res) => {
+        console.log(res);
+        if (res.status === 200) {
+          alert(res?.data?.message);
+          setLoader(false);
+          hideModal();
+        } else {
+          setLoader(false);
+          return;
+        }
+      })
+      .catch((e) => {
+        setLoader(false);
+        console.log(e);
       });
-    });
   };
 
   return (
@@ -30,7 +50,7 @@ const SendMail = ({ openAccModal, closeModal }) => {
         <div className="col-10">
           <form action="" className="" onSubmit={submitEmail}>
             <label id="B-plan-label"> Enter your email </label>
-            <div className="business_row">
+            <div className="business_row mt-3">
               <input
                 required
                 type="email"

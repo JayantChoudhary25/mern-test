@@ -95,8 +95,8 @@ svg.recharts-surface {
     justify-content: center;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    width: 7%;
-    height: 100vh;
+    /* width: 7%; */
+    /* height: 100vh; */
   }
   .offcanvas-header .btn-close {
     margin-top: -5.5rem;
@@ -156,6 +156,9 @@ svg.recharts-surface {
   .mobile_drawer .container-fluid {
     width: 100%;
   }
+  .responsive_drawer{
+    z-index: 2;
+  }
   button.navbar-toggler {
     padding: 10px 0px;
   }
@@ -180,7 +183,7 @@ svg.recharts-surface {
     height: 16px;
   }
   .navbar {
-    width: 10%;
+    width: 100%;
   }
   #transition-popper {
     width: 80%;
@@ -194,7 +197,7 @@ svg.recharts-surface {
     align-items: center;
     justify-content: center;
     /* width: 30px; */
-    height: 34px;
+    /* height: 34px; */
     padding: 5px 10px;
     /* background: #FCD09A; */
   }

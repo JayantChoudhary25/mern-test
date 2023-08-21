@@ -13,7 +13,7 @@ const ContactUs = () => {
             <h1 className="text-center" id="form-h1">
               <b>Contact Me</b>
             </h1>
-            <p className="text-center w-50 m-auto" id="form-p">
+            <p className="text-center  m-auto" id="form-p">
               Contrary to popular belief, Lorem Ipsum is not simply random text.
               It has roots in a piece of classical Latin literature from 45 BC,
               making it over 2000 years old.
@@ -46,7 +46,7 @@ const ContactUs = () => {
                 </div>
               </div>
             <div className="col-md-6  form-input-box">
-              <div className="d-flex">
+              <div className="d-flex form-input-border">
                 <input
                   className="inputs border border-1border-secondary text-secondary w-100"
                   id="form-inputs"
@@ -61,7 +61,7 @@ const ContactUs = () => {
                 />
               </div>
 
-              <div className="d-flex ">
+              <div className="d-flex form-input-border2 ">
                 <input
                   className="inputs border border-1border-secondary w-100"
                   id="form-inputs"
