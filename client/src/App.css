@@ -61,6 +61,10 @@ button:focus{
   box-shadow: none !important;
 }
 
+.inactive_btn{
+  background: #c9c4c4cf !important;
+  color: white !important ;
+}
 /* custom input */
 .custom_input {
   border: 1px solid #cdcdcd;
@@ -90,4 +94,9 @@ line-height: normal;
 }
 
 
-/* media query */
+/* MODAL BOX */
+.MuiBox-root{
+  width:50%;
+}
+
+

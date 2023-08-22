@@ -54,3 +54,20 @@ exports.updateBusinessPlan = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
+// delete BusinessPlan (Admin)
+exports.deleteBusinessPlan = catchAsyncErrors(async (req, res, next) => {
+  const user = await BusinessPlan.findById(req.body.id);
+
+  if (!user) {
+    return next(
+      new ErrorHander(`BusinessPlan does not exist with Id: ${req.body.id}`, 400)
+    );
+  }
+  
+  await user.remove();
+
+  res.status(200).json({
+    success: true,
+    message: "BusinessPlan Deleted Successfully",
+  });
+});

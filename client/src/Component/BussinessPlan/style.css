@@ -1,14 +1,24 @@
 .business_main {
+  background: url("./../../Component/Assets/background.png");
   width: 100%;
+  /* height: 100vh; */
+  background-size: cover;
+  /* background-position: initial; */
+  background-repeat: no-repeat;
+  background-position: 92% 50%;
+  /* background-position: right 45px bottom 20px; */
 }
+
 .card {
   /* z-index: 9999; */
   width: 30%;
   border-radius: 20px;
 }
+
 #user {
   border-radius: 30px;
 }
+
 .bussiness_head h5 {
   color: #000;
   text-align: center;
@@ -17,6 +27,7 @@
   font-weight: 700;
   line-height: normal;
 }
+
 .bussiness_head p {
   color: #181818;
   text-align: center;
@@ -25,6 +36,7 @@
   font-weight: 500;
   line-height: 26px;
 }
+
 .B-plan_bottom {
   position: absolute;
   bottom: 0px;
@@ -36,7 +48,8 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 28px; /* 175% */
+  line-height: 28px;
+  /* 175% */
   cursor: pointer;
 }
 
@@ -44,6 +57,7 @@
   display: flex;
   justify-content: space-around !important;
 }
+
 #B-plan-key {
   text-decoration: none;
   color: hsl(354, 62%, 52%);
@@ -51,16 +65,19 @@
   padding: 10px;
   float: left;
 }
+
 #key {
   float: left;
   margin: 35px 0px 35px 0px;
 }
+
 .btn-close {
   position: absolute;
   opacity: 10;
   margin: 5px;
   right: 10px;
 }
+
 #B-plan-label {
   text-align: start;
   margin: 12px 0;
@@ -86,10 +103,12 @@
   width: 74px;
   height: -webkit-fill-available;
 }
+
 #icon svg {
   height: 20px !important;
   width: 20px !important;
 }
+
 #icon-2 {
   background-color: #d13a49;
   position: absolute;
@@ -100,9 +119,11 @@
   height: -webkit-fill-available;
   color: white;
 }
+
 #modal {
   width: 200%;
 }
+
 #B-plan-label-2 {
   color: #181818;
   font-family: Quicksand;
@@ -125,6 +146,7 @@
   box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.05);
   width: 30%;
 }
+
 .custom_card .business_img {
   width: 97%;
   height: auto;
@@ -135,6 +157,7 @@
 .business_list {
   list-style-image: url("../Assets/arrow.svg");
 }
+
 .business_list li {
   line-height: 30px;
   color: #181818;
@@ -177,6 +200,7 @@
 .card_price p {
   font-size: 40px;
 }
+
 .card_price small {
   font-size: 18px;
 }

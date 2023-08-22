@@ -63,7 +63,7 @@ a.nav-link:before {
   height: 5px;
   background-color: #3a7bfa;
   position: absolute;
-  top: 120%;
+  top: 121%;
   left: 0;
   transition: all 0.5s;
 }
@@ -74,7 +74,7 @@ a.nav-link:after {
   height: 5px;
   background-color: #d13a49;
   position: absolute;
-  top: 120%;
+  top: 121%;
   right: 0;
   transition: all 0.5s;
   

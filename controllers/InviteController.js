@@ -140,18 +140,18 @@ exports.agreementStatus = catchAsyncErrors(async (req, res, next) => {
     }
 
     // Upload the PDF to S3
-    const bufferStream = new stream.PassThrough();
-    bufferStream.end(Buffer.from(pdfBase64Data, 'base64'));
+    // const bufferStream = new stream.PassThrough();
+    // bufferStream.end(Buffer.from(pdfBase64Data, 'base64'));
 
-    const params = {
-      Bucket: '',
-      Key: `pdfs/${email}-${Date.now()}.pdf`,
-      Body: bufferStream,
-    };
+    // const params = {
+    //   Bucket: '',
+    //   Key: `pdfs/${email}-${Date.now()}.pdf`,
+    //   Body: bufferStream,
+    // };
 
-    const uploadResult = await s3.upload(params).promise();
+    // const uploadResult = await s3.upload(params).promise();
 
-    user.pdf_url = uploadResult.Location;
+    // user.pdf_url = uploadResult.Location;
     user.ndaStatus = ndaStatus;
 
     await user.save();

@@ -11,7 +11,7 @@ const Mobile = () => {
     <>
       <section>
         <div className="container" id="mob">
-          <div className="main_div mt-5">
+         
             <div className="">
               <img className="w-100" src={michel} alt="image" />
             </div>
@@ -20,7 +20,7 @@ const Mobile = () => {
                 <b>Michael</b> Pricharda
               </span>
             </div>
-            <div
+            <div 
               className="bg-dark relative w-100 text-white px-5 py-5
                "
             >
@@ -29,7 +29,7 @@ const Mobile = () => {
                   <p id="m-about-U">Height : 6'2"</p>
                   <p id="m-about-U">Sex : Male</p>
                 </div>
-                <div>
+                <div className="m-height-s" >
                   <p id="m-about-U">Weight : 180lbs</p>
                   <p id="m-about-U">Pronouns : He/Him</p>
                 </div>
@@ -66,7 +66,7 @@ const Mobile = () => {
               <p className="m-r-work">WORK EXPERIENCE</p>
               <div className="m-r-blue-bar-2"></div>
               <p className="m-r-ceo">CEO, President</p>
-              <div className="d-flex">
+              <div id="work-flex" className="d-flex">
                 <div className="m-r-current">
                   <p className="m-r-current-t">2023 &gt; Current</p>
                 </div>
@@ -84,7 +84,7 @@ const Mobile = () => {
               </p>
 
               <p className="m-r-ceo-e">Executive Director, President</p>
-              <div className="d-flex">
+              <div id="work-flex"  className="d-flex">
                 <div className="m-r-current">
                   <p className="m-r-current-t-2">2014 &gt; Current</p>
                 </div>
@@ -100,11 +100,11 @@ const Mobile = () => {
               </p>
 
               <p className="m-r-ceo-g">Growth, IT, Strategy Consultant</p>
-              <div className="d-flex">
+              <div id="work-flex"  className="d-flex">
                 <div className="m-r-current">
                   <p className="m-r-current-t">2003 &gt; Current</p>
                 </div>
-                <p className="m-r-trained">DBA Michael Pricharda</p>
+                <p id="growth-train" className="m-r-trained">DBA Michael Pricharda</p>
               </div>
               <p className="m-r-para-2 ">
                 Championed integrating growth strategies with innovative IT
@@ -119,8 +119,8 @@ const Mobile = () => {
               </p>
 
               <h3 className="m-skills">SKILLS</h3>
-              <div className="m-r-blue-bar"></div>
-              <div className="d-flex justify-content-between mt-4">
+              <div id="m-blue-barr" className="m-r-blue-bar"></div>
+              <div id="m-skills-div" className="d-flex justify-content-between mt-4">
                 <div className="">
                   <ul id="m-m-list">
                     <li id="m-list">
@@ -139,7 +139,7 @@ const Mobile = () => {
                     <li id="m-list">Operations Management</li>
                   </ul>
                 </div>
-                <div className="">
+                <div className="m-skills-2">
                   <ul id="m-m-list">
                     <li id="m-list">Presentations</li>
                     <li id="m-list">PR & Negotiation</li>
@@ -163,18 +163,18 @@ const Mobile = () => {
             <div className="m-sec_3">
               <div id="m-hm" className=" m-auto">
                 <h4>
-                  <b className="" id="m-expr ">
+                  <b className="" id="m-expr">
                     EXPERTISE
                   </b>
                 </h4>
-                <div className="m-r-blue-bar mt-3"></div>
+                <div id="m-blue-ex" className="m-r-blue-bar mt-2"></div>
                 <div className="d-flex"></div>
 
                 <div
                   id="m-progress-box"
                   className="row justify-content-center align-items-center"
                 >
-                  <div className="col-md-6 mt-3">
+                  <div className="col-md-6 mt-2">
                     <div className="m-tool" id="m-results">
                       Growth Strategy
                       {/* <p className="tooltiptext">
@@ -189,7 +189,7 @@ const Mobile = () => {
                         </p> */}
                     </div>
                   </div>
-                  <div className="col-md-6 mt-3">
+                  <div className="col-md-6 mt-2">
                     <Animated progressRange={100} />
                   </div>
 
@@ -228,16 +228,16 @@ const Mobile = () => {
                   </div>
                 </div>
               </div>
-              <div id="m-hm" className=" m-auto py-1">
+              <div id="m-hm" className=" m-auto py-1 pt-5">
                 <h4>
-                  <b id="m-interest" className="py-2">
+                  <b id="m-interest" className="py-2 ">
                     INTERESTS
                   </b>
                 </h4>
                 <div className="m-r-blue-bar"></div>
-                <div className="d-flex justify-content-around lh-lg">
+                <div id="inter-div" className="d-flex justify-content-around lh-lg ">
                   <div className="mt-3">
-                    <div className="d-flex">
+                    <div id="hari" className="d-flex">
                       <li id="m-finance"></li>
                       <p id="m-cat-inter">Finance</p>
                     </div>
@@ -259,18 +259,18 @@ const Mobile = () => {
                   </div>
                 </div>
               </div>
-              <div id="m-hm" className="d-flex  m-auto mt-5s ">
+              <div  className="d-flex  m-auto mt-5s ">
                 <div className="icon-sec mt-4 ">
                   <img id="m-icon-resume" src={call} />
-                  <img id="m-icon-resume" className="my-4" src={email} />
+                  <img id="m-icon-resume" className="" src={email} />
                   <img
                     id="m-icon-resume"
-                    className="mt-4 w-50 p-2"
+                    className="w-50"
                     src={location}
                   />
                 </div>
                 <div className="mt-4 ">
-                  <div className="pb-3">
+                  <div className="">
                     <h6 id="m-info"> Call me!</h6>
                     <a href="tel:1(866)3761970" id="m-info-c">
                       1(866)-376-1970
@@ -291,16 +291,16 @@ const Mobile = () => {
             </div>
             <div className=" m-auto py-5">
               <div
-                className="row justify-content-center align-items-center mb-5"
+                className="row d-flex justify-content-center align-items-center mb-5"
                 style={{ gap: "10px" }}
               >
-                <div className="col-lg-2 col-md-3 col-10">
-                  <button type="button" className="btn  custom_btn">
+                <div className="col-lg-2 col-md-3 col-6">
+                  <button type="button" id="b-contact" className="btn  custom_btn">
                     DOWNLOAD
                   </button>
                 </div>
-                <div className="col-lg-2 col-md-3 col-10">
-                  <button type="button" className="btn  custom_btn">
+                <div className="col-lg-2 col-md-3 col-6">
+                  <button type="button" className="btn  custom_btn" id="b-contact">
                     <a className="b-contact" href="/contact">
                       CONTACT ME
                     </a>
@@ -308,7 +308,7 @@ const Mobile = () => {
                 </div>
               </div>
             </div>
-          </div>
+      
         </div>
       </section>
     </>

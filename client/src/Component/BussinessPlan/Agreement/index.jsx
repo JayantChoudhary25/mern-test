@@ -9,8 +9,9 @@ import "./style.css";
 function NDAAgreement() {
   const sigRef = useRef();
   const [signature, setSignature] = useState(null);
-  const [isLoader, setLoader] = useState(false);
+  const [signUrl, setSignUrl] = useState(null);
   const [isSign, setSign] = useState(false);
+  const [isLoader, setLoader] = useState(false);
 
   const handleSignatureEnd = () => {
     setSignature(sigRef.current.toDataURL());
@@ -32,14 +33,17 @@ function NDAAgreement() {
 
   const handleSubmitAgreement = async () => {
     const reqbody = {
-      _id: 1,
-      signature: signature,
       ndaStatus: isSign,
+      email: "user@gmail.com",
+      pdfBase64Data: signUrl,
     };
 
-    if (signature === null) {
-      alert("Please sign the agreement first the form");
+    if (signUrl === null) {
+      alert("Please sign the agreement first");
     } else {
+      // to generate PDF
+      generatePDF();
+
       setLoader(true);
       await axios
         .post("/api/auth/agreementStatus", reqbody, "")
@@ -78,20 +82,22 @@ function NDAAgreement() {
     };
 
     html2pdf().set(opt).from(element).save();
-    //    // Generate the PDF and convert it to base64
-    // const pdfData = await html2pdf().set(opt).from(element).outputPdf();
+    // Generate the PDF and convert it to base64
+    const pdfData = await html2pdf().set(opt).from(element).outputPdf();
 
-    // // Convert the PDF data to base64
-    // const base64PDF = btoa(pdfData);
+    // Convert the PDF data to base64
+    const base64PDF = btoa(pdfData);
 
-    // // Now you have the base64 encoded PDF
-    // console.log(base64PDF);
+    // Now you have the base64 encoded PDF
+    console.log(base64PDF);
+    setSignUrl(base64PDF);
   };
 
   return (
     <section className="agreement_main">
       <div className="container">
         <div className="inner pt-5" id="html-element">
+          
           <div className="">
             <h2>Lorem Ipsum Non-Disclosure Agreement</h2>
             <p>
@@ -102,16 +108,36 @@ function NDAAgreement() {
 
             <div className="details row">
               <div className="col-12 mt-3">
-                <input type="text"  className="" placeholder="Your Name or Company Name" onChange="" />
+                <input
+                  type="text"
+                  className=""
+                  placeholder="Your Name or Company Name"
+                  onChange=""
+                />
               </div>
               <div className="col-12 mt-3">
-                <input type="text"  className="" placeholder="Address" onChange="" />
+                <input
+                  type="text"
+                  className=""
+                  placeholder="Address"
+                  onChange=""
+                />
               </div>
               <div className="col-12 mt-3">
-               <input type="text"  className="" placeholder="City, State, Zip Code" onChange="" />
+                <input
+                  type="text"
+                  className=""
+                  placeholder="City, State, Zip Code"
+                  onChange=""
+                />
               </div>
               <div className="col-12 mt-3">
-                <input type="text"  className="" placeholder="Disclosing Party" onChange="" />
+                <input
+                  type="text"
+                  className=""
+                  placeholder="Disclosing Party"
+                  onChange=""
+                />
               </div>
             </div>
 
@@ -257,11 +283,15 @@ function NDAAgreement() {
                     />
                   </div>
                 )}
-                <button className="px-4 btn" onClick={clearSignature}> Clear </button>
+                <button className="px-4 btn" onClick={clearSignature}>
+                  {" "}
+                  Clear{" "}
+                </button>
               </div>
             </div>
           </div>
         </div>
+
         <div className="row justify-content-end mb-4 pb-4">
           <div className="col-lg-2 col-md-4 col-10">
             {isSign ? (
@@ -273,6 +303,7 @@ function NDAAgreement() {
             )}
           </div>
         </div>
+
       </div>
     </section>
   );

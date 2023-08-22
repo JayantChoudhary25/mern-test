@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+
 import { UserList } from "./AdminPages/UserList";
-
-import style from "../Css/admin.module.css";
-import stylelogin from "../Css/Login.module.css";
-import "../Css/style.css";
-import "./style.css"
-
-import logo from "../Assets/logo.svg";
-import menu_icon from "../Assets/menu_icon.svg";
-import logoutIcon from "../Assets/admin/logout.svg";
-import Home from "../Assets/admin/Home.svg";
 import Dashboard from "../Assets/admin/dashboard.svg";
 import { Business_page } from "./AdminPages/BusinessPage";
 import { NonSignedUser } from "./AdminPages/NonSignedUser";
 import { SubscribedUser } from "./AdminPages/SubscribedUser";
 import { SignedUser } from "./AdminPages/SignedUser";
+
+import style from "../Css/admin.module.css";
+import stylelogin from "../Css/Login.module.css";
+import "../Css/style.css";
+import "./style.css";
+
+import logo from "../Assets/logo.svg";
+import menu_icon from "../Assets/menu_icon.svg";
+import logoutIcon from "../Assets/admin/logout.svg";
+import User from "../Assets/dashboard/user.svg";
+import Test from "./test";
+import Home from "./Assets/Home";
 
 const MainPage = () => {
   return (
@@ -44,37 +48,37 @@ const adminDashList = [
     id: 1,
     label: "Dashboard",
     component: <MainPage />,
-    icon: `${Home}`,
+    icon: "",
   },
   {
     id: 2,
     label: "All Users",
     component: <UserList />,
-    icon: ``,
+    icon: "",
   },
   {
     id: 3,
     label: "Business Plan",
-    component: <Business_page /> ,
-    icon: ``,
+    component: <Business_page />,
+    icon: "",
   },
   {
     id: 4,
     label: "Signed User",
     component: <SignedUser />,
-    icon: ``,
+    icon: "",
   },
   {
     id: 5,
     label: "Non-Signed User",
-    component: <NonSignedUser/>,
-    icon: ``,
+    component: <NonSignedUser />,
+    icon: '',
   },
   {
     id: 6,
     label: "Subscribed User",
-    component: <SubscribedUser/>,
-    icon: ``,
+    component: <SubscribedUser />,
+    icon: '',
   },
   {
     id: 7,
@@ -91,7 +95,7 @@ export const Admin = () => {
 
   // logout
   const handleOpen = () => {
-    localStorage.removeItem("accessToken");
+    sessionStorage.removeItem("accessToken");
     navigate("/admin-login");
   };
 
@@ -130,12 +134,12 @@ export const Admin = () => {
                       }`}
                       onClick={() => handleComponent(list.label, list.id)}
                     >
-                      <img
+                      {/* <img
                         src={list.icon}
                         alt=""
                         style={{ height: "18px", width: "18px" }}
-                      />
-                      {/* {list.label} */}
+                      /> */}
+                      {list.icon}
                     </span>
                   ))}
                 </div>
@@ -171,7 +175,9 @@ export const Admin = () => {
                   className="btn-close"
                   data-bs-dismiss="offcanvas"
                   aria-label="Close"
-                ></button>
+                >
+                  <HighlightOffIcon />
+                </button>
               </div>
               <div className={`${style.mobile_left_section}`}>
                 <div className="">
@@ -194,6 +200,12 @@ export const Admin = () => {
                             alt=""
                             style={{ height: "18px", width: "18px" }}
                           /> */}
+                          <span
+                            className=""
+                            style={{ height: "20px", width: "20px" }}
+                          >
+                            {list.icon}
+                          </span>
                           {list.label}
                         </span>
                       ))}
@@ -210,7 +222,11 @@ export const Admin = () => {
                   ></div>
                   <b
                     className="text-center px-2"
-                    style={{ fontSize: "18px", cursor: "pointer" }}
+                    style={{
+                      fontSize: "18px",
+                      cursor: "pointer",
+                      color: "white",
+                    }}
                     onClick={handleOpen}
                   >
                     <img
@@ -219,7 +235,7 @@ export const Admin = () => {
                       style={{
                         height: "18px",
                         width: "18px",
-                        marginRight: "6px",
+                        marginRight: "10px",
                       }}
                     />
                     Sign Out
@@ -233,8 +249,8 @@ export const Admin = () => {
       {/* mobile drawer end */}
 
       {/* desktop view start*/}
-      <div className="d-flex">  
-        <div className={`${style.left_section} left_section` }>
+      <div className="d-flex">
+        <div className={`${style.left_section} left_section`}>
           <div className="">
             <div className={`${stylelogin.headers}`}>
               <img src={logo} alt="loading..." className="img-fluid" />
@@ -254,6 +270,8 @@ export const Admin = () => {
                       alt=""
                       style={{ height: "18px", width: "18px" }}
                     /> */}
+
+                    {list.icon}
                     {list.label}
                   </span>
                 ))}
@@ -268,10 +286,7 @@ export const Admin = () => {
                 border: "0.20px #FEFCFF solid",
               }}
             ></div>
-            <b
-              className="text-center px-2 sign_out"
-              onClick={handleOpen}
-            >
+            <b className="text-center px-2 sign_out" onClick={handleOpen}>
               <img
                 src={logoutIcon}
                 alt="logout"

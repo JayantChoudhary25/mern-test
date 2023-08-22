@@ -13,7 +13,7 @@ const Resume = () => {
       <section >
         <Mobile/>
         <div id="desk" className=" container">
-        <div className=" r-main-div d-flex">
+          <div className=" r-main-div d-flex">
             <div className=" r-michel">
               <div>
                 <img className="r-michel-img" src={michel} alt="image" />
@@ -22,12 +22,12 @@ const Resume = () => {
                 <span className="r-digital">DIGITAL UTILITY EXPERT</span>
               </div>
               <div
-                className="bg-dark relative text-white px-5 py-5
+                className="bg-dark relative  text-white px-5 py-5
                "
               >
                 <div
                   id="details"
-                  className="d-flex py-3 justify-content-evenly   text-white"
+                  className="d-flex py-3 justify-content-evenly text-white"
                 >
                   <div className="height-s">
                     <p id="about-U">Height:6'2"</p>
@@ -45,16 +45,22 @@ const Resume = () => {
                 </h4>
                 <div className="r-blue-bar my-3 mb-4"></div>
                 <p>
-                  <b id="e-cllg">International Business & Marketing</b>
+                  <b id="e-cllg" className="pt-2">
+                    International Business & Marketing
+                  </b>
                 </p>
-                <p id="e-cllg-year">(Albright Collage 2000-2003 )</p>
+                <p id="e-cllg-year" className="pb-4">
+                  (Albright Collage 2000-2003 )
+                </p>
               </div>
               <div className="sec_3">
                 <div id="hm" className=" m-auto py-5 pt-5">
                   <h4>
-                    <b className="pt-4" id="expr ">EXPERTISE</b>
+                    <b className="pt-4" id="expr ">
+                      EXPERTISE
+                    </b>
                   </h4>
-                  <div className="r-blue-bar mt-4"></div>
+                  <div className="r-blue-bar mt-3"></div>
                   <div className="d-flex"></div>
 
                   <div
@@ -80,7 +86,7 @@ const Resume = () => {
                       {/* <div id="pro-bar" className="progress bg-dark">
                         <div className="growth-progress"></div>
                       </div> */}
-                      <Animated progressRange={100}/>
+                      <Animated progressRange={100} />
                     </div>
 
                     <div className="col-md-6 mt-2">
@@ -92,7 +98,7 @@ const Resume = () => {
                       {/* <div id="pro-bar" className="progress bg-dark">
                         <div className="innov-progress"></div>
                       </div> */}
-                      <Animated progressRange={60}/>
+                      <Animated progressRange={60} />
                     </div>
 
                     <div className="col-md-6 mt-2">
@@ -104,7 +110,7 @@ const Resume = () => {
                       {/* <div id="pro-bar" className="progress bg-dark">
                         <div className="AI-progress"></div>
                       </div> */}
-                      <Animated progressRange={50}/>
+                      <Animated progressRange={50} />
                     </div>
                     <div className="col-md-6 mt-2">
                       <h6 className="line-hov" id="results">
@@ -115,7 +121,7 @@ const Resume = () => {
                       {/* <div id="pro-bar" className="progress bg-dark">
                         <div className="IT-progress"></div>
                       </div> */}
-                      <Animated progressRange={80}/>
+                      <Animated progressRange={80} />
                     </div>
                     <div className="col-md-6 mt-2">
                       <h6 className="line-hov" id="results">
@@ -126,14 +132,14 @@ const Resume = () => {
                       {/* <div id="pro-bar" className="progress bg-dark">
                         <div className="marketing-progress"></div>
                       </div> */}
-                      <Animated progressRange={50}/>
+                      <Animated progressRange={50} />
                     </div>
                   </div>
                 </div>
                 <div id="hm" className=" m-auto py-4">
                   <h4>
                     <b id="interest" className="py-2">
-                      Interests
+                      INTERESTS
                     </b>
                   </h4>
                   <div className="r-blue-bar"></div>
@@ -144,7 +150,6 @@ const Resume = () => {
                         <p id="cat-inter">Finance</p>
                       </div>
 
-                    
                       <div className="d-flex">
                         <li id="enginee"></li>
                         <p id="cat-inter">Engineering</p>
@@ -162,36 +167,50 @@ const Resume = () => {
                     </div>
                   </div>
                 </div>
-                <div id="hm" className="d-flex  m-auto mt-5s ">
-                  <div className="icon-sec mt-4 pb-5">
-                    <img id="icon-resume" src={call} />
-                    <img id="icon-resume" className="my-5" src={email} />
-                    <img
-                      id="icon-resume"
-                      className="my-3 w-50 p-1"
-                      src={location}
-                    />
-                  </div>
-                  <div className="mt-4 ">
-                    <div className="pb-3">
-                      <h6 id="info"> Call me!</h6>
-                      <a href="tel:1(866)3761970" id="info-c">1(866)-376-1970</a>
+
+                <div
+                  className=" wow fadeInUp"
+                  style={{
+                    visibility: "visible",
+                    animationDuration: "1000ms",
+                    animationDelay: "300ms",
+                    animationName: "fadeInLeft",
+                  }}
+                >
+                  <div id="hm" className="d-flex  m-auto mt-5s ">
+                    <div className="icon-sec mt-4 pb-5">
+                      <img id="icon-resume" src={call} />
+                      <img id="icon-resume" className="my-5" src={email} />
+                      <img
+                        id="icon-resume"
+                        className="my-3 w-50 p-1"
+                        src={location}
+                      />
                     </div>
-                    <div className="pt-3 pb-3">
-                      <h6 id="info"> Email me!</h6>
-                      <a href="mailto:mpricharda@gmail.com" id="info-c">mpricharda@gmail.com</a>
-                    </div>
-                    <div className="pt-3  pb-3">
-                      <h6 id="info"> Send me coupons!</h6>
-                      <a id="info-c-l">Reading, pA, USA</a>
+                    <div className="mt-4 ">
+                      <div className="pb-3">
+                        <h6 id="info"> Call me!</h6>
+                        <a href="tel:1(866)3761970" id="info-c">
+                          1(866)-376-1970
+                        </a>
+                      </div>
+                      <div className="pt-3 pb-3">
+                        <h6 id="info"> Email me!</h6>
+                        <a href="mailto:mpricharda@gmail.com" id="info-c">
+                          mpricharda@gmail.com
+                        </a>
+                      </div>
+                      <div className="pt-3  pb-3">
+                        <h6 id="info"> Send me coupons!</h6>
+                        <a id="info-c-l">Reading, pA, USA</a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-            <div className="r-left-dive">
-              
+              <div className="r-left-dive">
                 <div className="right-michel-divv">
                   <p className="r-michel-head">
                     {" "}
@@ -213,103 +232,114 @@ const Resume = () => {
                     and platforms, embodying clients' vision to increase market
                     share and profitability.
                   </div>
-               
+                </div>
+
+                <div className="left-inner">
+                  <p className="r-work">WORK EXPERIENCE</p>
+                  <div className="r-blue-bar-2"></div>
+                  <p className="r-ceo">CEO, President</p>
+                  <div className="d-flex">
+                    <div className="r-current">
+                      <p className="r-current-t">2023 &gt; Current</p>
+                    </div>
+                    <p className="r-trained">Trained O.S.A.I.</p>
+                  </div>
+                  <p className="r-para-2">
+                    Defined company's vision and strategy, driving the
+                    development of AI technologies that address industry
+                    challenges. Secured multiple high-profile sponsors,
+                    fostering strategic partnerships. Assembled a dynamic team
+                    of experts, fostering a collaborative environment that’s
+                    propelled the company's innovation. Navigate complex
+                    regulatory landscapes and ethical considerations, ensuring
+                    the company's AI solutions adhere to the highest standards
+                    of responsibility and transparency.
+                  </p>
+
+                  <p className="r-ceo-e">Executive Director, President</p>
+                  <div className="d-flex">
+                    <div className="r-current">
+                      <p className="r-current-t-2">2014 &gt; Current</p>
+                    </div>
+                    <p className="r-trained">The CoCreate Group</p>
+                  </div>
+                  <p className="r-para-2">
+                    Pioneered nonprofit initiative guiding startups and
+                    nonprofits through their early years. Orchestrated
+                    development of unique programs and resources, equipping
+                    emerging organizations with tools, mentorship, and
+                    strategies needed to thrive. Forged strategic partnerships,
+                    vertically integrating with companies to broaden impact, and
+                    drive collective success.
+                  </p>
+
+                  <p className="r-ceo-g">Growth, IT, Strategy Consultant</p>
+                  <div className="d-flex">
+                    <div className="r-current">
+                      <p className="r-current-t">2003 &gt; Current</p>
+                    </div>
+                    <p className="r-trained">DBA Michael Pricharda</p>
+                  </div>
+                  <p className="r-para-2 ">
+                    Championed integrating growth strategies with innovative IT
+                    solutions to optimize operational efficiency and bottom-line
+                    results. Pioneered digital, event, and experiential
+                    marketing campaigns, consistently exceeding client
+                    expectations. Served as a trusted advisor to leadership
+                    teams, offering actionable insights to drive business
+                    success. Honed skills and expertise to stay at the forefront
+                    of industry trends and emerging technologies to provide
+                    clients with up-to-date and effective solutions.
+                  </p>
+
+                  <h3 className="skills">SKILLS</h3>
+                  <div className="r-blue-bar"></div>
+                  <div className="d-flex justify-content-between mt-4">
+                    <div className="">
+                      <ul id="list">
+                        <li id="list">
+                          Advertising / Branding / Digital Marketing
+                        </li>
+                        <li id="list">Budgeting, Expense Planning</li>
+                        <li id="list">Campaign Design and Management</li>
+                        <li id="list">Collaborative Communication</li>
+                        <li id="list">Consultative Sales</li>
+                        <li id="list">Cost Control</li>
+                        <li id="list">Critical Thinking & Analysis</li>
+                        <li id="list">Customer Care</li>
+                        <li id="list">Event Management</li>
+                        <li id="list">Independent and Teamwork</li>
+                        <li id="list">Lean Management</li>
+                        <li id="list">Operations Management</li>
+                      </ul>
+                    </div>
+                    <div className="">
+                      <ul id="list">
+                        <li id="list">Presentations</li>
+                        <li id="list">PR & Negotiation</li>
+                        <li id="list">Process Improvement </li>
+                        <li id="list"> Problem-Solving </li>
+                        <li id="list">Project Ownership</li>
+                        <li id="list">
+                          {" "}
+                          Public Speaking & Relationship Building
+                        </li>
+                        <li id="list"> SEO / SMO</li>
+                        <li id="list"> Strategic Planning and Implementing </li>
+                        <li id="list">
+                          {" "}
+                          Supervision & Activities Coordination
+                        </li>
+                        <li id="list"> Team Development</li>
+                        <li id="list">Time Management</li>
+                        <li id="list">
+                          Workload Prioritization & Multitasking
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <div className="left-inner">
-                <p className="r-work">WORK EXPERIENCE</p>
-                <div className="r-blue-bar-2"></div>
-                <p className="r-ceo">CEO, President</p>
-                <div className="d-flex">
-                  <div className="r-current">
-                    <p className="r-current-t">2023 &gt; Current</p>
-                  </div>
-                  <p className="r-trained">Trained O.S.A.I.</p>
-                </div>
-                <p className="r-para-2">
-                  Defined company's vision and strategy, driving the development
-                  of AI technologies that address industry challenges. Secured
-                  multiple high-profile sponsors, fostering strategic
-                  partnerships. Assembled a dynamic team of experts, fostering a
-                  collaborative environment that’s propelled the company's
-                  innovation. Navigate complex regulatory landscapes and ethical
-                  considerations, ensuring the company's AI solutions adhere to
-                  the highest standards of responsibility and transparency.
-                </p>
-
-                <p className="r-ceo-e">Executive Director, President</p>
-                <div className="d-flex">
-                  <div className="r-current">
-                    <p className="r-current-t-2">2014 &gt; Current</p>
-                  </div>
-                  <p className="r-trained">The CoCreate Group</p>
-                </div>
-                <p className="r-para-2">
-                  Pioneered nonprofit initiative guiding startups and nonprofits
-                  through their early years. Orchestrated development of unique
-                  programs and resources, equipping emerging organizations with
-                  tools, mentorship, and strategies needed to thrive. Forged
-                  strategic partnerships, vertically integrating with companies
-                  to broaden impact, and drive collective success.
-                </p>
-
-                <p className="r-ceo-g">Growth, IT, Strategy Consultant</p>
-                <div className="d-flex">
-                  <div className="r-current">
-                    <p className="r-current-t">2003 &gt; Current</p>
-                  </div>
-                  <p className="r-trained">DBA Michael Pricharda</p>
-                </div>
-                <p className="r-para-2 ">
-                  Championed integrating growth strategies with innovative IT
-                  solutions to optimize operational efficiency and bottom-line
-                  results. Pioneered digital, event, and experiential marketing
-                  campaigns, consistently exceeding client expectations. Served
-                  as a trusted advisor to leadership teams, offering actionable
-                  insights to drive business success. Honed skills and expertise
-                  to stay at the forefront of industry trends and emerging
-                  technologies to provide clients with up-to-date and effective
-                  solutions.
-                </p>
-
-                <h3 className="skills">SKILLS</h3>
-                <div className="r-blue-bar"></div>
-                <div className="d-flex justify-content-between mt-4">
-                  <div className="">
-                    <ul id="list">
-                      <li id="list">Advertising / Branding / Digital Marketing</li>
-                      <li id="list">Budgeting, Expense Planning</li>
-                      <li id="list">Campaign Design and Management</li>
-                      <li id="list">Collaborative Communication</li>
-                      <li id="list">Consultative Sales</li>
-                      <li id="list">Cost Control</li>
-                      <li id="list">Critical Thinking & Analysis</li>
-                      <li id="list">Customer Care</li>
-                      <li id="list">Event Management</li>
-                      <li id="list">Independent and Teamwork</li>
-                      <li id="list">Lean Management</li>
-                      <li id="list">Operations Management</li>
-                    </ul>
-                  </div>
-                  <div className="">
-                    <ul id="list">
-                      <li id="list">Presentations</li>
-                      <li id="list">PR & Negotiation</li>
-                      <li id="list">Process Improvement </li>
-                      <li id="list"> Problem-Solving </li>
-                      <li id="list">Project Ownership</li>
-                      <li id="list"> Public Speaking & Relationship Building</li>
-                      <li id="list">  SEO / SMO</li>
-                      <li id="list"> Strategic Planning and Implementing </li>
-                      <li id="list"> Supervision & Activities Coordination</li>
-                      <li id="list"> Team Development</li>
-                      <li id="list">Time Management</li>
-                      <li id="list">Workload Prioritization & Multitasking</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
           <div className=" m-auto py-5">
@@ -332,7 +362,6 @@ const Resume = () => {
             </div>
           </div>
         </div>
-        
       </section>
     </>
   );

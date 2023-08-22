@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter,
   Routes,
@@ -18,7 +18,6 @@ import { Admin_Login } from "./Component/AdminModule/AdminLogin/Admin";
 import Resume from "./Component/Home/Resume";
 
 import NDAAgreement from "./Component/BussinessPlan/Agreement";
-
 
 function NotFoundPage() {
   return <div className="page">Not Found Page</div>;
@@ -45,13 +44,28 @@ function FooterMain() {
   return <Footer />;
 }
 
+function PrivateRoute({ element, token }) {
+  if (token !== null) {
+    return element;
+  } else {
+    return <Navigate to="/admin-login" replace />;
+  }
+}
+
 export default function Navbar() {
+  const [token, setToken] = useState(
+    JSON.parse(sessionStorage.getItem("accessToken"))
+  );
+
   return (
     <BrowserRouter>
       <HeaderMain />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route
+          path="/admin"
+          element={<PrivateRoute element={<Admin />} token={token} />}
+        />
         <Route path="/admin-login" element={<Admin_Login />} />
         <Route path="/404" element={<NotFoundPage />} />
         <Route path="/business-plan" element={<BusinessPlan />} />

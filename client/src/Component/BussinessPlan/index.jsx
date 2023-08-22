@@ -105,6 +105,7 @@ const BusinessPlan = () => {
 
   return (
     <section className="business_main  justify-content-center align-items-center text-center py-50">
+      
       <div className="container">
         <div className="bussiness_head row justify-content-center">
           <div className="col-lg-8 col-md-10 col-12">

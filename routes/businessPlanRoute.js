@@ -3,7 +3,8 @@ const {
     addBusinessPlan,
     getBusinessPlan,
     getAllBusinessPlan,
-    updateBusinessPlan
+    updateBusinessPlan,
+    deleteBusinessPlan
   
 } = require("../controllers/businessPlanController");
 const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
@@ -22,6 +23,9 @@ router
 router
   .route("/updateBusinessPlan")
   .post(isAuthenticatedUser, authorizeRoles("admin"), updateBusinessPlan);
+router
+  .route("/deleteBusinessPlan")
+  .post(isAuthenticatedUser, authorizeRoles("admin"), deleteBusinessPlan);
 
 
 module.exports = router;

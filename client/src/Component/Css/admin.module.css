@@ -14,6 +14,9 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 20px 20px;
+  height: 100vh;
+  background: #000;
+  font-family: Quicksand;
 }
 
 .right_section {
@@ -103,12 +106,12 @@
 }
 .top_section h6 {
   color: #000;
-text-align: center;
-font-family: Quicksand;
-font-size: 30px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 /* dashboard home page */
@@ -149,6 +152,10 @@ line-height: normal;
   margin: 0 auto;
 }
 
+.dashboard_section svg{
+  height: 20px !important;
+  width: 20px !important;
+}
 @media (min-width: 992px) and(max-width: 1024px) {
   .heading {
     font-size: 34px;
@@ -230,5 +237,6 @@ line-height: normal;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: black;
   }
 }
