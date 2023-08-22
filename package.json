@@ -1,7 +1,7 @@
 {
-  "name": "michaelpricharda",
+  "name": "test",
   "version": "1.0.0",
-  "description": "Michael Pricharda",
+  "description": "test",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -9,16 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anurag-17/MichaelPricharda.git"
-  },
-  "author": "Control F5",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/anurag-17/MichaelPricharda/issues"
-  },
-  "homepage": "https://github.com/anurag-17/MichaelPricharda#readme",
   "dependencies": {
     "@mui/material": "^5.14.5",
     "aws-sdk": "^2.1440.0",
